@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles for wrapper */
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px; /* z-index activated */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background, .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.background {
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+h1 {
+    position: absolute;
+    top: 5%;
+    font-size: 8vw; /* Adjusted font size */
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    background-color: black;
+    color: white;
+    padding: 5% 0; /* Adjusted padding */
+}
+
+.secheading {
+    font-size: 4vw; /* Adjusted font size */
+    padding: 0 10%;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10%;
+    margin: 5% 0; /* Adjusted margin */
+}
+
+.bg {
+    position: relative;
+    height: 50vh; /* Adjusted height */
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.desc {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    font-size: 3.5vw; /* Adjusted font size */
+    font-weight: 600;
+    transform: translate(-50%, -50%); /* Corrected translation */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+    
+    .secheading {
+        font-size: 6vw;
+    }
+    
+    .text {
+        font-size: 1rem;
+    }
+    
+    .desc {
+        font-size: 4vw;
+    }
+    
+    .bg {
+        height: 30vh;
+    }
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
